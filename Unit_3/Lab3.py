@@ -1,9 +1,3 @@
-# Assignment: Lab3.py
-# Class: CS131
-# Date: 03/06/22
-# Author: Mike Crawford
-# Instructions: 
-#
 # Write a program that uses nested loops to draw this pattern:
 # ===========================
 #                           |
