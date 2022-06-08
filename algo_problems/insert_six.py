@@ -8,26 +8,23 @@
 # Return 620
 
 
-# Partial solution inserting character '6'. Still researching how to return max number.
-import time
-
 def insert_six(num: int):
     # write your code here
-    stringnum = str(num)
-    vr = {}
-    for i in range (len(stringnum)+1):
-        vr[i] = f"{stringnum[:i]}6{stringnum[i:]}"
-        time.sleep(.5)
-        print (vr[i])
-    print()
+    if num < 0:
+        return num
+    else:
+        stringnum = str(num)
+        vr = {}
+        for i in range (len(stringnum)+1):
+            vr[i] = f"{stringnum[:i]}6{stringnum[i:]}"
+        largest_int = max(vr.values())
+        return largest_int
 
 def main():
-    test_numbers = [1, 100, 12345, 65432, 0, -1]
-    for num in test_numbers:
-        print(f'The number is: {num}\n------------------')
-        insert_six(num)
+    tests= [20, 9981, 2147483647, 1234565, 0, -1, 8]
+    for num in tests:
+        print("Largest possible int from {num}: {result}".format(num=num, result=insert_six(num)))
+    return
 
-        
 if __name__ == "__main__":
     main()
-        
